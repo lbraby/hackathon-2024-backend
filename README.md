@@ -21,4 +21,4 @@
   - returns list of dictionaries with keys `id` and `name`
 ### POST Methods
 - POST /dishes/like/`username`/`dish_id` : add ingredients from specified dish to `username`'s liked ingredients
-- POST /ingredients/like/`username`/`dish_id` : add ingredients to `username`'s liked ingredients
+- POST /ingredients/like/`username`/`ingredient_id` : add ingredients to `username`'s liked ingredients
