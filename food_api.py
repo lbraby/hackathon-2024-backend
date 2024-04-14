@@ -63,7 +63,6 @@ def get_cuisine_dishes(cuisine_type):
         cur.execute("select b.id, b.name from dish_ingredients a, ingredients b where a.ingredient_id = b.id and a.dish_id = ?", (dish[0], ))
         rows = cur.fetchall()
         for row in rows:
-            print(row)
             ingredients.append({"id": row[0], "name": row[1]})
 
         output.append({"id": dish[0], "name": dish[1], "description": dish[2], "ingredients": ingredients, "uri": dish[3], "image_url": dish[4], "cuisine_type": dish[5]})
@@ -92,7 +91,6 @@ def get_menu():
         cur.execute("select b.id, b.name from dish_ingredients a, ingredients b where a.ingredient_id = b.id and a.dish_id = ?", (dish[0], ))
         rows = cur.fetchall()
         for row in rows:
-            print(row)
             ingredients.append({"id": row[0], "name": row[1]})
 
         output.append({"id": dish[0], "name": dish[1], "description": dish[2], "ingredients": ingredients, "uri": dish[3], "image_url": dish[4], "cuisine_type": "Lebanese"})

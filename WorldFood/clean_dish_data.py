@@ -7,7 +7,7 @@ def main():
         dishes_to_remove = []
 
         for dish in dishes:
-            if "image_url" not in dishes[dish] or dishes[dish]["image_url"] == "" or "cuisine_type" not in dishes[dish] or dishes[dish]["cuisine_type"] == "":
+            if "image_url" not in dishes[dish] or dishes[dish]["image_url"] == "" or "cuisine_type" not in dishes[dish] or dishes[dish]["cuisine_type"] == "" or any(char.isdigit() for char in dish):
                 dishes_to_remove.append(dish)
 
         for dish in dishes_to_remove:
