@@ -10,3 +10,5 @@ echo "getting ingredients..."
 python get_ingredients.py
 echo "cleaning dish data..."
 python clean_dish_data.py
+echo "cleaning ingredient data..."
+python clean_ingredient_data.py

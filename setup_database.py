@@ -44,7 +44,10 @@ with open("WorldFood/dishes.json", "r", encoding="utf-8") as dishes_file:
                 continue
 
             cur.execute("select id from ingredients where name = ?", (ingredient, ))
-            ingredient_id = cur.fetchone()[0]
+            item = cur.fetchone()
+            if item is None:
+                continue
+            ingredient_id = item[0]
 
             cur.execute("insert into dish_ingredients (dish_id, ingredient_id) values (?, ?)", (dish_id, ingredient_id))
 
