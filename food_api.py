@@ -62,7 +62,7 @@ def get_cuisine_dishes(cuisine_type):
         rows = cur.fetchall()
         for row in rows:
             print(row)
-            ingredients.append({"id": row[0], "ingredient": row[1]})
+            ingredients.append({"id": row[0], "name": row[1]})
 
         output.append({"id": dish[0], "name": dish[1], "description": dish[2], "ingredients": ingredients, "uri": dish[3], "image_url": dish[4], "cuisine_type": dish[5]})
 
@@ -91,7 +91,7 @@ def get_menu():
         rows = cur.fetchall()
         for row in rows:
             print(row)
-            ingredients.append({"id": row[0], "ingredient": row[1]})
+            ingredients.append({"id": row[0], "name": row[1]})
 
         output.append({"id": dish[0], "name": dish[1], "description": dish[2], "ingredients": ingredients, "uri": dish[3], "image_url": dish[4], "cuisine_type": "Lebanese"})
 
